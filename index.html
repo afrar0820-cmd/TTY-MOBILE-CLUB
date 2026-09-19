@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TTY MOBILE CLUB | Buy • Sell • Exchange Mobiles, Laptops & Gadgets</title>
+  <meta name="description" content="TTY MOBILE CLUB (Estd 2021) - Your trusted destination for New & Used Mobile Phones, Laptops, Smart Watches, Earbuds, Accessories & Gadgets in Tamil Nadu, Puducherry & India.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span>🚚 Free Delivery in Tamil Nadu & Puducherry</span>
+    <span>•</span>
+    <span>⚡ 1 Day Checking Warranty Available</span>
+    <span>•</span>
+    <span>📦 Shipping Across India</span>
+  </div>
+
+  <!-- Sticky Main Header -->
+  <header class="main-header">
+    <div class="header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo">
+        <img src="assets/logo.jpg" alt="TTY Mobile Club Logo">
+        <div class="brand-title-wrap">
+          <span class="brand-name">TTY MOBILE CLUB</span>
+          <span class="brand-estd">ESTD 2021</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#catalog">Shop</a></li>
+          <li><a href="#catalog" onclick="app.setCategory('Mobiles')">Mobiles</a></li>
+          <li><a href="#catalog" onclick="app.setCategory('Laptops')">Laptops</a></li>
+          <li><a href="#catalog" onclick="app.setCategory('Earbuds')">Gadgets</a></li>
+          <li><a href="#catalog" onclick="app.setCategory('Accessories')">Accessories</a></li>
+          <li><a href="#sell-exchange">Sell / Exchange</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <!-- Instant Search -->
+        <div class="header-search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="headerSearchInput" placeholder="Search mobiles, laptops...">
+        </div>
+
+        <!-- WhatsApp Quick Button -->
+        <a href="https://wa.me/916385396977" target="_blank" class="whatsapp-header-btn">
+          💬 <span>WhatsApp</span>
+        </a>
+
+        <!-- Shopping Cart Trigger -->
+        <button class="icon-btn" onclick="app.openCart()" title="Shopping Cart">
+          🛒
+          <span class="cart-badge">0</span>
+        </button>
+
+        <!-- Admin Panel Key Trigger -->
+        <button class="icon-btn" onclick="app.openAdminModal()" title="Admin Dashboard" style="border-color: var(--accent-glow);">
+          🔑
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>✨ Established 2021</span>
+          <span>•</span>
+          <span>Buy • Sell • Exchange</span>
+        </div>
+
+        <h1 class="hero-title">
+          TTY MOBILE CLUB<br>
+          <span class="gradient-text">Your Trusted Destination for Mobiles & Gadgets</span>
+        </h1>
+
+        <p class="hero-subheading">
+          Buy • Sell • Exchange — Quality New & Certified Pre-Owned Phones, Laptops, Smart Watches & Tech Accessories at Affordable Prices.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#catalog" class="btn-primary">
+            <span>SHOP NOW</span>
+            <span>→</span>
+          </a>
+          <a href="#sell-exchange" class="btn-outline-accent">
+            <span>SELL / EXCHANGE</span>
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <span>CONTACT US</span>
+          </a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🛡️</div>
+            <div class="highlight-text">
+              <strong>1 Day Checking Warranty</strong>
+              <span>For Tested Pre-owned Devices</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🚚</div>
+            <div class="highlight-text">
+              <strong>Free Delivery TN & PY</strong>
+              <span>Fast Shipping Across India</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">♻️</div>
+            <div class="highlight-text">
+              <strong>Instant Trade-In</strong>
+              <span>Best Price for Old Devices</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card -->
+      <div class="hero-visual">
+        <div class="hero-card-stack">
+          <div class="hero-card-glow"></div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="badge-condition brand-new">Top Selling Flagship</span>
+            <span style="font-weight: 800; color: var(--accent-cyan);">Estd 2021</span>
+          </div>
+          
+          <div class="hero-img-wrap">
+            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80" alt="iPhone 15 Pro Showcase">
+          </div>
+
+          <div class="hero-card-info">
+            <div>
+              <div style="font-weight: 800; color: #fff; font-size: 1.1rem;">Apple iPhone 15 Pro</div>
+              <div style="font-size: 0.8rem; color: var(--text-secondary);">256GB • Natural Titanium • Mint Condition</div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-family: var(--font-heading); font-weight: 900; color: #fff; font-size: 1.25rem;">₹92,999</div>
+              <div style="font-size: 0.75rem; color: var(--success); font-weight: 700;">Save ₹41,901</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Store Section Wrapper -->
+  <main>
+
+    <!-- Quick Category Carousel / Chips -->
+    <div class="section-wrapper" style="padding-top: 40px; padding-bottom: 20px;">
+      <div class="category-bar">
+        <button class="category-chip active" data-cat="All" onclick="app.setCategory('All')">🔥 All Items</button>
+        <button class="category-chip" data-cat="Mobiles" onclick="app.setCategory('Mobiles')">📱 Mobiles</button>
+        <button class="category-chip" data-cat="Laptops" onclick="app.setCategory('Laptops')">💻 Laptops</button>
+        <button class="category-chip" data-cat="Smart Watches" onclick="app.setCategory('Smart Watches')">⌚ Smart Watches</button>
+        <button class="category-chip" data-cat="Earbuds" onclick="app.setCategory('Earbuds')">🎧 Earbuds & Speakers</button>
+        <button class="category-chip" data-cat="Accessories" onclick="app.setCategory('Accessories')">🔌 Chargers & Accessories</button>
+        <button class="category-chip" data-cat="Gaming" onclick="app.setCategory('Gaming')">🎮 Gaming Gear</button>
+      </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section class="section-wrapper" style="padding-top: 10px;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">🔥 Handpicked Hot Deals</span>
+          <h2 class="section-title">Featured Products</h2>
+        </div>
+        <a href="#catalog" class="btn-outline-accent" style="font-size: 0.85rem; padding: 8px 16px;">View All Store Catalog →</a>
+      </div>
+      <div id="featuredGrid" class="product-grid"></div>
+    </section>
+
+    <!-- Latest Mobiles Section -->
+    <section class="section-wrapper">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">📱 Smartphone Hub</span>
+          <h2 class="section-title">Latest New & Pre-Owned Mobiles</h2>
+        </div>
+      </div>
+      <div id="latestMobilesGrid" class="product-grid"></div>
+    </section>
+
+    <!-- Product Catalog & Filtering Section -->
+    <section id="catalog" class="section-wrapper">
+      <div class="section-header" style="margin-bottom: 20px;">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">🛍️ Explore Inventory</span>
+          <h2 class="section-title">Product Catalog</h2>
+        </div>
+        
+        <div style="width: 300px; max-width: 100%;">
+          <input type="text" id="catalogSearchInput" class="form-input" placeholder="Search mobiles, laptops, gadgets...">
+        </div>
+      </div>
+
+      <div class="catalog-layout">
+        <!-- Sidebar Filters -->
+        <aside class="filter-sidebar">
+          <div>
+            <div class="filter-group-title">
+              <span>Filter by Brand</span>
+            </div>
+            <div class="filter-list">
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Apple"> Apple</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Samsung"> Samsung</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="OnePlus"> OnePlus</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Xiaomi"> Xiaomi</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Redmi"> Redmi</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Oppo"> Oppo</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Vivo"> Vivo</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Realme"> Realme</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Nothing"> Nothing</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Google"> Google</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Motorola"> Motorola</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Asus"> Asus</label>
+              <label class="filter-checkbox"><input type="checkbox" class="brand-checkbox" value="Sony"> Sony</label>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--border-color); padding-top: 16px;">
+            <div class="filter-group-title">
+              <span>Condition</span>
+            </div>
+            <div class="filter-list">
+              <label class="filter-checkbox"><input type="checkbox" class="condition-checkbox" value="Brand New"> Brand New (Sealed)</label>
+              <label class="filter-checkbox"><input type="checkbox" class="condition-checkbox" value="Used"> Certified Used / Pre-owned</label>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--border-color); padding-top: 16px;">
+            <div class="filter-group-title">
+              <span>Max Price</span>
+              <span id="priceRangeValue" style="color: var(--accent-cyan); font-weight: 800; font-size: 0.85rem;">₹1,50,000</span>
+            </div>
+            <div class="price-range-wrap">
+              <input type="range" id="priceRangeSlider" min="1000" max="150000" step="1000" value="150000">
+            </div>
+          </div>
+
+          <button onclick="app.resetFilters()" class="btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem; padding: 10px;">
+            Reset Filters
+          </button>
+        </aside>
+
+        <!-- Main Product Grid -->
+        <div>
+          <div id="catalogGrid" class="product-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Laptops Section -->
+    <section class="section-wrapper">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">💻 High Performance Computing</span>
+          <h2 class="section-title">Laptops & MacBooks</h2>
+        </div>
+      </div>
+      <div id="laptopsGrid" class="product-grid"></div>
+    </section>
+
+    <!-- Buy / Sell / Exchange Banner Section -->
+    <section id="sell-exchange" class="section-wrapper">
+      <div class="sell-banner-card">
+        <div>
+          <span class="hero-badge" style="margin-bottom: 14px;">♻️ Instant Phone Trade-In & Selling</span>
+          <h2 style="font-size: 2.2rem; color: #fff; line-height: 1.2; margin-bottom: 14px;">
+            Sell or Exchange Your Old Phone for Top Cash!
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
+            Get an instant quotation for your old phone, tablet, or laptop. Upgrade to a brand new or certified pre-owned smartphone with seamless trade-in value adjustment.
+          </p>
+          
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 8px; color: #fff; font-weight: 600; font-size: 0.9rem;">
+              <span style="color: var(--success); font-weight: 800;">✓</span> Instant Quotation
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; color: #fff; font-weight: 600; font-size: 0.9rem;">
+              <span style="color: var(--success); font-weight: 800;">✓</span> Best Market Valuation
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; color: #fff; font-weight: 600; font-size: 0.9rem;">
+              <span style="color: var(--success); font-weight: 800;">✓</span> Instant Doorstep / Store Cash
+            </div>
+          </div>
+        </div>
+
+        <!-- Sell Your Phone Form Card -->
+        <div class="sell-form-card">
+          <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 16px;">📲 Get Instant Cash Quote</h3>
+          
+          <form onsubmit="app.submitSellForm(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">Your Name *</label>
+                <input type="text" name="sellerName" class="form-input" required placeholder="Full Name">
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">Mobile Number *</label>
+                <input type="tel" name="sellerPhone" class="form-input" required placeholder="10-digit Mobile">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Phone Brand *</label>
+                <select name="sellBrand" class="form-select" required>
+                  <option value="Apple">Apple</option>
+                  <option value="Samsung">Samsung</option>
+                  <option value="OnePlus">OnePlus</option>
+                  <option value="Xiaomi">Xiaomi / Redmi</option>
+                  <option value="Vivo">Vivo</option>
+                  <option value="Oppo">Oppo</option>
+                  <option value="Realme">Realme</option>
+                  <option value="Google">Google Pixel</option>
+                  <option value="Other">Other Brand</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Phone Model *</label>
+                <input type="text" name="sellModel" class="form-input" required placeholder="e.g. iPhone 13 / S22">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Storage / RAM</label>
+                <input type="text" name="sellStorage" class="form-input" placeholder="e.g. 128GB / 8GB">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Battery Health %</label>
+                <input type="number" name="sellBattery" class="form-input" placeholder="e.g. 88">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Overall Condition</label>
+                <select name="sellCondition" class="form-select">
+                  <option value="Flawless Mint">Flawless Mint (Scratchless)</option>
+                  <option value="Good Condition">Good Condition (Minor Marks)</option>
+                  <option value="Fair Condition">Fair Condition (Usual Wear)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Expected Price (₹)</label>
+                <input type="number" name="sellPrice" class="form-input" placeholder="Expected Amount">
+              </div>
+
+              <div class="form-group full">
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                  GET QUOTATION ON WHATSAPP 💬
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose TTY Mobile Club (Trust Section) -->
+    <section class="section-wrapper">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">⭐ Trust & Commitment</span>
+          <h2 class="section-title">Why Choose TTY MOBILE CLUB?</h2>
+        </div>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon">✅</div>
+          <div class="trust-info">
+            <h4>Quality Tested Products</h4>
+            <p>Every pre-owned device undergoes a strict 30+ point diagnostic check before listing.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">💰</div>
+          <div class="trust-info">
+            <h4>Affordable Prices</h4>
+            <p>Get maximum value for your money with competitive pricing on new & used gadgets.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">🛡️</div>
+          <div class="trust-info">
+            <h4>1 Day Checking Warranty</h4>
+            <p>1 Day Instant checking warranty on tested phones for total peace of mind.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">♻️</div>
+          <div class="trust-info">
+            <h4>Buy / Sell / Exchange</h4>
+            <p>Hassle-free trade-in for your old phone with instant price valuation.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">🚚</div>
+          <div class="trust-info">
+            <h4>Free Delivery in TN & PY</h4>
+            <p>Enjoy free shipping across Tamil Nadu & Puducherry + Express India shipping.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon">🤝</div>
+          <div class="trust-info">
+            <h4>Trusted Customer Service</h4>
+            <p>Direct WhatsApp support & customer service since our establishment in 2021.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-wrapper">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 24px; padding: 40px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;">
+        <div>
+          <img src="assets/logo.jpg" style="width: 100%; max-width: 320px; border-radius: var(--radius-lg); border: 1px solid var(--border-glow);">
+        </div>
+        <div>
+          <span class="section-subtitle">Established 2021</span>
+          <h2 style="font-size: 2.2rem; color: #fff; margin: 6px 0 16px;">About TTY MOBILE CLUB</h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px;">
+            <strong>TTY MOBILE CLUB</strong> is an online electronics marketplace focused on mobiles, laptops, gadgets and accessories. Founded in 2021, we provide buying, selling and exchange services with customer-focused service and affordable pricing.
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+            Whether you are looking for the latest sealed flagship smartphone, high-performance laptop, smart watch, or want to turn your old device into cash, TTY Mobile Club guarantees transparent grading and quality products.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="section-wrapper">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">📍 Get In Touch</span>
+          <h2 class="section-title">Contact & Location Info</h2>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 30px;">
+          <h3 style="font-size: 1.3rem; color: #fff; margin-bottom: 16px;">TTY MOBILE CLUB</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.95rem; color: var(--text-secondary);">
+            <div>📍 <strong>Location:</strong> Pudhumanai Street, Thittacheri - 609703, Nagapattinam District, Tamil Nadu</div>
+            <div>📞 <strong>Phone:</strong> +91 63853 96977</div>
+            <div>💬 <strong>WhatsApp:</strong> +91 63853 96977</div>
+            <div>✉️ <strong>Email:</strong> ttymobileclub@gmail.com</div>
+            <div>⏰ <strong>Business Hours:</strong> 10:00 AM – 9:30 PM (Mon – Sun)</div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <a href="https://wa.me/916385396977" target="_blank" class="whatsapp-header-btn" style="flex: 1; justify-content: center;">
+              💬 WhatsApp
+            </a>
+            <a href="tel:+916385396977" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">
+              📞 Call
+            </a>
+            <a href="https://maps.google.com/?q=Pudhumanai+Street,+Thittacheri,+Nagapattinam,+Tamil+Nadu+609703" target="_blank" class="btn-outline-accent" style="padding: 8px 16px; font-size: 0.85rem;">
+              📍 Directions
+            </a>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 style="font-size: 1.3rem; color: #fff; margin-bottom: 12px;">🚚 Pan-India Shipping</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">
+              We provide free delivery for all orders within Tamil Nadu and Puducherry. For other states across India, fast express shipping is available with live tracking updates.
+            </p>
+          </div>
+          <div style="background: rgba(0, 136, 255, 0.08); border: 1px solid var(--border-glow); padding: 16px; border-radius: var(--radius-md);">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent-cyan);">Delivery Estimate:</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">• Tamil Nadu & Puducherry: 1 – 2 Working Days</div>
+            <div style="font-size: 0.85rem; color: var(--text-secondary);">• Rest of India: 3 – 5 Working Days</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modals Container -->
+
+  <!-- Product Details Modal -->
+  <div id="productDetailModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="app.closeModal('productDetailModal')">&times;</button>
+      <div id="productDetailContent"></div>
+    </div>
+  </div>
+
+  <!-- Book Order Form Modal -->
+  <div id="bookOrderModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 650px;">
+      <button class="modal-close-btn" onclick="app.closeModal('bookOrderModal')">&times;</button>
+      
+      <h2 style="font-size: 1.5rem; color: #fff; margin-bottom: 6px;">📦 Book Order</h2>
+      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px;">
+        Fill in your delivery details below. Our team will contact you for order confirmation.
+      </p>
+
+      <div id="bookOrderSummary"></div>
+
+      <form onsubmit="app.submitOrderForm(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Full Name *</label>
+            <input type="text" name="fullName" class="form-input" required placeholder="Customer Name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Mobile Number *</label>
+            <input type="tel" name="mobileNumber" class="form-input" required placeholder="10-digit Mobile Number">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">WhatsApp Number</label>
+            <input type="tel" name="whatsappNumber" class="form-input" placeholder="WhatsApp Phone">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" name="email" class="form-input" placeholder="name@email.com">
+          </div>
+
+          <div class="form-group full">
+            <label class="form-label">Delivery Street Address *</label>
+            <input type="text" name="deliveryAddress" class="form-input" required placeholder="Door No, Street Name, Area">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">City *</label>
+            <input type="text" name="city" class="form-input" required placeholder="e.g. Chennai / Puducherry">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">District</label>
+            <input type="text" name="district" class="form-input" placeholder="District">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">State *</label>
+            <input type="text" name="state" class="form-input" required value="Tamil Nadu">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Pincode *</label>
+            <input type="text" name="pincode" class="form-input" required placeholder="600XXX">
+          </div>
+
+          <div class="form-group full">
+            <label class="form-label">Payment Preference *</label>
+            <select name="paymentPreference" class="form-select" required>
+              <option value="Cash on Delivery">Cash on Delivery (COD)</option>
+              <option value="UPI">UPI (Google Pay / PhonePe / Paytm)</option>
+              <option value="Bank Transfer">Bank Transfer (NEFT / IMPS)</option>
+              <option value="Pay at Store">Pay at Store (Pickup)</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 14px;">
+              [CONFIRM ORDER] 🔥
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Success Confirmation Modal -->
+  <div id="orderSuccessModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 500px; text-align: center;">
+      <div style="font-size: 3.5rem; margin-bottom: 10px;">🎉</div>
+      <h2 style="font-size: 1.6rem; color: #fff; margin-bottom: 8px;">Order Request Received!</h2>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">
+        Thank you, <strong id="successCustomerName" style="color: #fff;">Customer</strong>! Our TTY Mobile Club team will contact you on WhatsApp shortly.
+      </p>
+
+      <div style="background: rgba(0, 136, 255, 0.08); border: 1px solid var(--accent-glow); padding: 16px; border-radius: var(--radius-md); margin-bottom: 24px;">
+        <div style="font-size: 0.8rem; color: var(--text-muted);">Unique Order ID</div>
+        <div id="successOrderId" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--accent-cyan);">TMC-2026-XXXX</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <button id="successWhatsAppBtn" class="whatsapp-header-btn" style="width: 100%; justify-content: center; padding: 14px; font-size: 1rem;">
+          💬 Send Order Summary to WhatsApp
+        </button>
+        <button onclick="app.closeModal('orderSuccessModal')" class="btn-secondary" style="width: 100%; justify-content: center;">
+          Close & Continue Shopping
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Slide Drawer -->
+  <div id="cartDrawer" class="cart-drawer">
+    <div>
+      <div class="cart-header">
+        <h3 style="font-size: 1.2rem; color: #fff;">🛒 Shopping Cart</h3>
+        <button onclick="app.closeCart()" style="color: #fff; font-size: 1.4rem;">&times;</button>
+      </div>
+
+      <div id="cartItemsList" class="cart-items-list"></div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Delivery:</span>
+        <span style="color: var(--success); font-weight: 700;">FREE (TN & PY)</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total Amount:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <button onclick="app.closeCart()" class="btn-secondary" style="flex: 1; justify-content: center; font-size: 0.85rem;">
+          CONTINUE
+        </button>
+        <button onclick="app.closeCart(); app.openBookOrderModal();" class="btn-primary" style="flex: 1.5; justify-content: center; font-size: 0.85rem;">
+          CHECKOUT NOW →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Secure Admin Dashboard Modal -->
+  <div id="adminDashboardModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 1000px;">
+      <button class="modal-close-btn" onclick="app.closeModal('adminDashboardModal')">&times;</button>
+      
+      <div class="admin-header">
+        <div>
+          <h2 style="font-size: 1.6rem; color: #fff;">🔑 Admin Control Dashboard</h2>
+          <span style="font-size: 0.8rem; color: var(--accent-cyan);">TTY MOBILE CLUB Inventory & Orders</span>
+        </div>
+
+        <button onclick="app.openAddProductModal()" class="btn-primary" style="font-size: 0.85rem; padding: 8px 16px;">
+          ➕ Add New Product
+        </button>
+      </div>
+
+      <div class="admin-tabs">
+        <button id="adminTabBtn_products" class="admin-tab-btn active" onclick="app.switchAdminTab('products')">📦 Store Products</button>
+        <button id="adminTabBtn_orders" class="admin-tab-btn" onclick="app.switchAdminTab('orders')">📑 Customer Orders</button>
+      </div>
+
+      <!-- Products Management Tab -->
+      <div id="adminTab_products" class="admin-tab-content">
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product Info</th>
+                <th>Condition</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminProductTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Orders Management Tab -->
+      <div id="adminTab_orders" class="admin-tab-content" style="display: none;">
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Product / Variant</th>
+                <th>Amount</th>
+                <th>Location</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="adminOrdersTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Add New Product Modal -->
+  <div id="addProductModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 600px;">
+      <button class="modal-close-btn" onclick="app.closeModal('addProductModal')">&times;</button>
+      
+      <h2 style="font-size: 1.4rem; color: #fff; margin-bottom: 16px;">➕ Add Product to Store</h2>
+
+      <form onsubmit="app.saveNewProduct(event)">
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label">Product Name *</label>
+            <input type="text" name="adminProdName" class="form-input" required placeholder="e.g. Apple iPhone 15 Pro Max">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Brand *</label>
+            <select name="adminProdBrand" class="form-select" required>
+              <option value="Apple">Apple</option>
+              <option value="Samsung">Samsung</option>
+              <option value="OnePlus">OnePlus</option>
+              <option value="Xiaomi">Xiaomi</option>
+              <option value="Redmi">Redmi</option>
+              <option value="Oppo">Oppo</option>
+              <option value="Vivo">Vivo</option>
+              <option value="Realme">Realme</option>
+              <option value="Nothing">Nothing</option>
+              <option value="Google">Google</option>
+              <option value="Motorola">Motorola</option>
+              <option value="HP">HP</option>
+              <option value="Dell">Dell</option>
+              <option value="Asus">Asus</option>
+              <option value="Sony">Sony</option>
+              <option value="JBL">JBL</option>
+              <option value="Anker">Anker</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Category *</label>
+            <select name="adminProdCategory" class="form-select" required>
+              <option value="Mobiles">Mobiles</option>
+              <option value="Laptops">Laptops</option>
+              <option value="Smart Watches">Smart Watches</option>
+              <option value="Earbuds">Earbuds</option>
+              <option value="Speakers">Speakers</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Gaming">Gaming</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Condition *</label>
+            <select name="adminProdCondition" class="form-select" required>
+              <option value="Brand New">Brand New</option>
+              <option value="Used">Used / Pre-owned</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Price (₹) *</label>
+            <input type="number" name="adminProdPrice" class="form-input" required placeholder="Selling Price">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">MRP (₹)</label>
+            <input type="number" name="adminProdMRP" class="form-input" placeholder="Original MRP">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Storage</label>
+            <input type="text" name="adminProdStorage" class="form-input" placeholder="e.g. 256GB">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">RAM</label>
+            <input type="text" name="adminProdRAM" class="form-input" placeholder="e.g. 8GB">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Color</label>
+            <input type="text" name="adminProdColor" class="form-input" placeholder="Color Name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Stock Quantity</label>
+            <input type="number" name="adminProdStock" class="form-input" value="5">
+          </div>
+
+          <div class="form-group full">
+            <label class="form-label">Image URL</label>
+            <input type="url" name="adminProdImage" class="form-input" placeholder="https://images.unsplash.com/...">
+          </div>
+
+          <div class="form-group full">
+            <label class="form-label">Description</label>
+            <textarea name="adminProdDesc" class="form-textarea" rows="3" placeholder="Product details..."></textarea>
+          </div>
+
+          <div class="form-group full">
+            <label class="form-label">Warranty Info</label>
+            <input type="text" name="adminProdWarranty" class="form-input" placeholder="e.g. 1 Year Official Warranty">
+          </div>
+
+          <div class="form-group full">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="adminProdFeatured"> Mark as Featured Product
+            </label>
+          </div>
+
+          <div class="form-group full">
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+              SAVE PRODUCT TO CATALOG
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="brand-logo" style="margin-bottom: 16px;">
+          <img src="assets/logo.jpg" alt="TTY Mobile Club Logo">
+          <div class="brand-title-wrap">
+            <span class="brand-name">TTY MOBILE CLUB</span>
+            <span class="brand-estd">ESTD 2021</span>
+          </div>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; max-width: 300px;">
+          Your trusted destination for New & Used Mobiles, Laptops, Gadgets, Smart Watches & Tech Accessories. Buy • Sell • Exchange.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="color: #fff; margin-bottom: 14px;">Quick Links</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+          <li><a href="#catalog">Featured Mobiles</a></li>
+          <li><a href="#catalog" onclick="app.setCategory('Laptops')">Laptops & MacBooks</a></li>
+          <li><a href="#catalog" onclick="app.setCategory('Earbuds')">Earbuds & Audio</a></li>
+          <li><a href="#sell-exchange">Sell Your Phone</a></li>
+          <li><a href="#sell-exchange">Exchange Trade-In</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #fff; margin-bottom: 14px;">Store Service</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+          <li>1 Day Checking Warranty</li>
+          <li>Free Delivery in TN & Puducherry</li>
+          <li>Pan-India Express Shipping</li>
+          <li>Instant Cash for Old Devices</li>
+          <li>Admin Dashboard Access</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #fff; margin-bottom: 14px;">Contact Us</h4>
+        <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 8px;">
+          <div>📍 Pudhumanai Street, Thittacheri - 609703</div>
+          <div>Nagapattinam District, Tamil Nadu</div>
+          <div>📞 Phone: +91 63853 96977</div>
+          <div>💬 WhatsApp: +91 63853 96977</div>
+          <div>✉️ ttymobileclub@gmail.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2021 – 2026 TTY MOBILE CLUB. All Rights Reserved.</div>
+      <div>Buy • Sell • Exchange | Quality Products at Affordable Prices</div>
+    </div>
+  </footer>
+
+  <!-- App Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
